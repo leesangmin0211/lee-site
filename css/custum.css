@@ -1,0 +1,245 @@
+@font-face {
+	font-family: 'Godo';
+	font-weight: normal;
+	src: url('../fonts/GodoM.ttf');
+}
+
+@font-face {
+	font-family: 'Godo';
+	font-weight: bold;
+	src: url('../fonts/GodoB.ttf');
+}
+
+@font-face {
+	font-family: 'GodoMaum';
+	font-weight: normal;
+	src: url('../fonts/GodoMaum.ttf');
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	position: relative;
+	overflow-x: hidden;
+	background: url('../images/background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: scroll;
+	font-family:
+		-apple-system,
+		BlinkMacSystemFont,
+		'Godo',
+		'GodoMaum'
+		'Segoe UI',
+		Roboto,
+		'Open Sans',
+		'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: subpixel-antialiased;
+	font-smoothing: subpixel-antialiased;
+}
+
+/* Container */
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+	position: absolute;
+}
+
+/* Typography */
+.tg-normal {
+	margin: 0;
+	padding: 0;
+	font-family: 'Godo';
+	font-weight: normal;
+}
+
+.tg-bold {
+	margin: 0;
+	padding: 0;
+	font-family: 'Godo';
+	font-weight: bold;
+}
+
+.tg-godomaum-normal {
+	margin: 0;
+	padding: 0;
+	font-family: 'GodoMaum';
+	font-weight: normal;
+}
+
+/* UIkit */
+.uk-icon-button {
+	background-color: unset;
+	color: #FFF;
+	border: 0.1px solid #FFF;
+}
+
+.uk-icon-button:hover {
+	color: rgb(55, 51, 61);
+	border: unset;
+}
+
+.uk-tooltip {
+	background-color: #161f21;
+	box-shadow: 0px 5px 10px rgba(12, 12, 12, 0.705);
+	padding: 5px 10px;
+	font-family: 'Godo';
+}
+
+.content {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	word-break: break-all;
+}
+
+.cards {
+	transform: rotateY(0deg);
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: .6s .1s;
+	cursor: pointer;
+}
+
+.front {
+	backface-visibility: hidden;
+	transform: rotateY(0deg);
+	z-index: 2;
+}
+
+.back {
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	z-index: 1;
+}
+
+.left-flex {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.circle {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background-color: #FFF;
+}
+
+/* Content Card */
+.front-card {
+	width: inherit;
+	height: inherit;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0px 50px;
+	background-color: #8EC5FC;
+	background-image: linear-gradient(134deg, #8EC5FC 0%, #E0C3FC 100%);
+	position: absolute;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(20, 20, 20, 0.705);
+}
+
+.back-card {
+	display: flex;
+	flex-direction: column;
+	background-color: #FFF;
+	padding: 20px 30px;
+	border-radius: 10px;
+	box-shadow: 0px 5px 10px rgba(20, 20, 20, 0.705);
+}
+
+/* Social */
+.social {
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+}
+
+/* Letter Text */
+.letter-text {
+	font-family: 'GodoMaum';
+	text-align: start;
+	font-size: 30px;
+	letter-spacing: 0.05em;
+	line-height: 1.6;
+	color: rgb(47, 45, 51);
+	margin: 10px 0px 20px 0px;
+	background-image: repeating-linear-gradient(0deg, #2c2a30 0, #2c2a30 1px, transparent 1px, transparent 1.6em);
+}
+
+/* Responsive Web */
+/* PC */
+@media screen and (min-width: 769px) {
+	.container {
+		padding: 30px 60px;
+	}
+
+	.content {
+		max-width: 700px;
+	}
+
+	.spacing-small {
+		height: 25px;
+		width: 25px;
+	}
+	
+	.spacing-medium {
+		height: 50px;
+		width: 50px;
+	}
+
+	.spacing-large {
+		height: 75px;
+		width: 75px;
+	}
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+	body {
+		background-image: url("../images/background-ver.jpg");
+	}
+
+	.container {
+		padding: 20px 40px;
+	}
+
+	.content {
+		max-width: 550px;
+	}
+
+	.spacing-small {
+		height: 15px;
+		width: 15px;
+	}
+	
+	.spacing-medium {
+		height: 30px;
+		width: 30px;
+	}
+
+	.spacing-large {
+		height: 45px;
+		width: 45px;
+	}
+}
