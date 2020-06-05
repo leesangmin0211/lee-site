@@ -28,11 +28,11 @@ function shareKakaoStory(e) {
 }
 
 function rotateCard(e) {
-  const card = document.getElementById('sangmin');
+	const card = document.getElementById('sangmin');
 
-  if (card.style.transform === 'rotateY(180deg)') {
-    card.style.transform = 'rotateY(0deg)';
-  } else {
-    card.style.transform = 'rotateY(180deg)';
-  }
-}
+	if (card.style.transform === 'rotateY(180deg)') {
+		card.style.transform = 'rotateY(0deg)';
+	} else {
+		card.style.transform = 'rotateY(180deg)';
+	}
+};

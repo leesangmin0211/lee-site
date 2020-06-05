@@ -13,7 +13,7 @@
 @font-face {
 	font-family: 'GodoMaum';
 	font-weight: normal;
-	src: url('../fonts/GodoMaum.ttf');
+	src: url('../fonts/godoMaum.ttf');
 }
 
 * {
@@ -86,6 +86,7 @@ body {
 
 .uk-icon-button:hover {
 	color: rgb(55, 51, 61);
+	background-color: #FFF;
 	border: unset;
 }
 
@@ -152,8 +153,9 @@ body {
 	justify-content: space-between;
 	align-items: center;
 	padding: 0px 50px;
-	background-color: #8EC5FC;
-	background-image: linear-gradient(134deg, #8EC5FC 0%, #E0C3FC 100%);
+	background: #ad5389;
+	background: -webkit-linear-gradient(315deg, #3c1053, #ad5389);
+	background: linear-gradient(315deg, #3c1053, #ad5389);
 	position: absolute;
 	border-radius: 10px;
 	box-shadow: 0px 5px 10px rgba(20, 20, 20, 0.705);
@@ -217,7 +219,7 @@ body {
 /* Mobile */
 @media screen and (max-width: 768px) {
 	body {
-		background-image: url("../images/background-ver.jpg");
+		background-image: url("../images/background-var.jpg");
 	}
 
 	.container {
